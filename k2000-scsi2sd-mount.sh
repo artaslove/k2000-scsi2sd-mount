@@ -10,9 +10,14 @@ if [ -z "$1" ]; then
 else
  sdcard=$1
 fi
-mkdir -p /media/{scsi0,scsi1,scsi2,scsi3}
-mount -v -t msdos -o loop,offset=0,sizelimit=2147483136 $sdcard /media/scsi0/
-mount -v -t msdos -o loop,offset=2147483136,sizelimit=2147483136 $sdcard /media/scsi1/
-mount -v -t msdos -o loop,offset=4294966272,sizelimit=2147483136 $sdcard /media/scsi2/
-mount -v -t msdos -o loop,offset=6442449408,sizelimit=2147483136 $sdcard /media/scsi3/
+n=0
+partitions=4
+offset=0
+sizelimit=2147483136
+while [ $n -lt $partitions ]; do
+ mkdir -p /media/scsi$n
+ mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi$n/
+ ((n++))
+ ((offset=offset+sizelimit))
+done
 exit 0
