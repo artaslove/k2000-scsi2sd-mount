@@ -6,7 +6,7 @@ This script assumes you have already setup the maximum of four 2G partitions wit
 
 Usage (as root):
 
-./mount-k2000-scsi2sd.sh [your sdcard device, ie. /dev/sdc]
+./k2000-scsi2sd-mount.sh [your sdcard device, ie. /dev/sdc]
 
 This will mount all four partitions as: 
 
@@ -21,4 +21,4 @@ This will mount all four partitions as:
 
 To unmount them, use:
 
-./umount-k2000-scsi2sd.sh 
+./k2000-scsi2sd-umount.sh 
