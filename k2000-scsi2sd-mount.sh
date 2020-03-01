@@ -1,5 +1,5 @@
 #!/bin/bash
-# default scsi2cd setup for kurtzweil k2000 v3.87, 4 2G partitions
+# default scsi2sd setup for kurtzweil k2000 v3.87, 4 2G partitions
 if [ "$EUID" -ne 0 ]; then
  echo "Please run this script as root!"
  exit 1
