@@ -2,7 +2,7 @@
 
 This script will mount scsi2sd emulated drives under linux. 
 
-This script assumes you have setup four 2G drives with scsi2sd-util available from http://www.codesrc.com/mediawiki/index.php/SCSI2SD, and then formatted the emulated drives on a K2000 with OS v3.87. If you have a different number of drives, or if they are different sizes, or if the scsi2sd drives are using a different filesystem, this script will not work without modifications. 
+This script assumes you have setup four 2G drives with scsi2sd-util available from http://www.codesrc.com/mediawiki/index.php/SCSI2SD, and then formatted the emulated drives on a K2000 with OS v3.87. If you have a different number of drives, or if they are different sizes, or a different filesystem, this script will not work without modifications. 
 
 Usage (as root):
 
