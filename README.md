@@ -8,16 +8,7 @@ Usage (as root):
 
 ./k2000-scsi2sd-mount.sh [your sdcard device, ie. /dev/sdc]
 
-This will mount all four partitions as: 
-
-/media/scsi0
-
-/media/scsi1
-
-/media/scsi2
-
-/media/scsi3
-
+This will mount all four partitions.
 
 To unmount them, use:
 
