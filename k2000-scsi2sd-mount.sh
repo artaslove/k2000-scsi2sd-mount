@@ -1,5 +1,5 @@
 #!/bin/bash
-# default scsi2sd setup for kurtzweil k2000 v3.87, 4 2G partitions
+# default scsi2sd setup for kurtzweil k2000 v3.87, 4 2G drives
 if [ "$EUID" -ne 0 ]; then
  echo "Please run this script as root!"
  exit 1
@@ -11,10 +11,10 @@ else
  sdcard=$1
 fi
 n=0
-partitions=4
+drives=4
 offset=0
 sizelimit=2147483136 			# 512B less than 2G
-while [ $n -lt $partitions ]; do
+while [ $n -lt $drives ]; do
  mkdir -p /media/scsi$n
  mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi$n/
  ((n++))
