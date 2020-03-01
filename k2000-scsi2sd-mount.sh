@@ -13,7 +13,7 @@ fi
 n=0
 partitions=4
 offset=0
-sizelimit=2147483136
+sizelimit=2147483136 			# 512B less than 2G
 while [ $n -lt $partitions ]; do
  mkdir -p /media/scsi$n
  mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi$n/
