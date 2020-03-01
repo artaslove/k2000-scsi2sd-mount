@@ -1,8 +1,8 @@
 # k2000-scsi2sd-mount
 
-This script will mount a scsi2sd created sdcard compatible with a Kurtzweil K2000 under linux. 
+This script will mount a scsi2sd created sdcard formatted by a Kurtzweil K2000 under linux. 
 
-This script assumes you have already setup the maximum of four 2G drives with scsi2sd-util available from http://www.codesrc.com/mediawiki/index.php/SCSI2SD, and subsequently formatted the emulated drives using the K2000 with the latest OS. Your milage may vary in any other instance. 
+This script assumes you have already setup four 2G drives with scsi2sd-util available from http://www.codesrc.com/mediawiki/index.php/SCSI2SD, and subsequently formatted the emulated drives on a K2000 with OS v3.87. If you have a different number of drives, or if they are different sizes, or if the scsi2sd drives are using a different filesystem, this script will not work. 
 
 Usage (as root):
 
