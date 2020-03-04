@@ -17,7 +17,7 @@ sizelimit=2147483136 			# 512B less than 2G because the blocksize is 512B in thi
 while [ $lun -lt $drives ]; do
  mkdir -p /media/scsi2sd-lun$lun
  mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi2sd-lun$lun/
- ((n++))
+ ((lun++))
  ((offset=offset+sizelimit))
 done
 exit 0
