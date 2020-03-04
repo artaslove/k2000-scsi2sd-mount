@@ -10,13 +10,13 @@ if [ -z "$1" ]; then
 else
  sdcard=$1
 fi
-n=0
+lun=0
 drives=4
 offset=0
 sizelimit=2147483136 			# 512B less than 2G because the blocksize is 512B in this case, and scsi2sd is taking care of the first block
-while [ $n -lt $drives ]; do
- mkdir -p /media/scsi2sd-lun$n
- mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi2sd-lun$n/
+while [ $lun -lt $drives ]; do
+ mkdir -p /media/scsi2sd-lun$lun
+ mount -v -t msdos -o loop,offset=$offset,sizelimit=$sizelimit $sdcard /media/scsi2sd-lun$lun/
  ((n++))
  ((offset=offset+sizelimit))
 done
